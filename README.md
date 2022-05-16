@@ -1,0 +1,2 @@
+# SubKey
+func KeyHasSubKeys($dict, $key)     return (Ubound($dict.Item($key).Items) > 0) endfunc ;Check Key for Subkeys  func PrintDict($dict)     for $key in $dict         if not KeyHasSubKeys($dict, $key) then             ConsoleWrite($key &amp; ":" $dict.Item($key) &amp; @crlf)          else              for $SubKey in $dict.Item($key)                 ; ... this is were I get stuck             next         endif          endfunc
